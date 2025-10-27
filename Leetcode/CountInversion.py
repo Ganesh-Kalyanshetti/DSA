@@ -1,7 +1,8 @@
 // this is brute force code 
 class Solution:
     def numberOfInversions(self, nums):
-        l = 0 for i in range(len(nums)-1):
+        l = 0
+        for i in range(len(nums)-1):
             for j in range(i+1,len(nums)):
                 if nums[j]<nums[i]:
                     l+=1
@@ -53,5 +54,6 @@ class Solution:
         a=self.mergesort(nums,0,len(nums)-1)
         return a
        
+
 
 

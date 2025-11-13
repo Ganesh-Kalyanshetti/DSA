@@ -1,42 +1,42 @@
-class Gen<T>
+class TwoGen<T,V>
 {
-	T ob;    	//placeholder
-	Gen(T P)
+	T ob1;
+	V ob2;
+	TwoGen(T i,V j)
 	{
-		ob = P;
+		ob1=i;	
+		ob2=j;
+
 	}
-	
-	T getOb()
+	T getob1()
 	{
-		return ob;
+		return ob1;
 	}
-	
-	void showType()
+	V getob2()
 	{
-		System.out.println("The Data type of T is "+ob.getClass().getName());
+		return ob2;
+	}
+	void showTypes()
+	{	
+		System.out.println("Type of T is :"+ob1.getClass().getName());
+		System.out.println("Type of V is :"+ob2.getClass().getName());
+
 	}
 }
-	
-class GenDemo
+
+class SimGen
 {
 	public static void main(String args[])
 	{
-		Gen<Integer> iob;
-		iob = new Gen<Integer>(88);
-		int a = iob.getOb();
-		System.out.println("Value of a "+a);
-		
-		Gen<String> sob = new Gen<String>("Dhoni is the best");
-		String str = sob.getOb();
-		System.out.println("Value of a "+str);
-		iob.showType();
-		sob.showType();
 
-		Gen<Double> fob = new Gen<Double>(16.485);
-		//fob = new Gen<Double>(22);
-		Double b = fob.getOb();
-		System.out.println("Value of b is "+b);
-		fob.showType();
-
+	TwoGen<Integer,String> tg = new TwoGen<Integer,String>(7,"Dhoni");
+	
+	int a = tg.getob1();
+	String b = tg.getob2();
+	System.out.println("Value of a is :"+a+" b is :"+b);
+	tg.showTypes();
 	}
+
+
+	
 }

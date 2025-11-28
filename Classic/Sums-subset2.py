@@ -58,8 +58,8 @@ totalsum(0,a,res,givenarr,target,sums,n)
 print(res)
 
 
-# if u want count
-def totalsum(i,a,res,givenarr,target,sums,n):
+# if u want count and remember u dont need to have res array now 
+def totalsum(i,a,givenarr,target,sums,n):
     if i==n:
         return 0
         
@@ -69,12 +69,12 @@ def totalsum(i,a,res,givenarr,target,sums,n):
     if target==sums:
         return 1
             
-    l=totalsum(i+1,a,res,givenarr,target,sums,n)
+    l=totalsum(i+1,a,givenarr,target,sums,n)
     
     sums-=givenarr[i]
     a.pop()
     
-    r=totalsum(i+1,a,res,givenarr,target,sums,n)
+    r=totalsum(i+1,a,givenarr,target,sums,n)
     
     return l+r
 a=[]
@@ -83,6 +83,7 @@ givenarr=[1,2,1]
 sums=0
 target=2
 n=3
-result = totalsum(0,a,res,givenarr,target,sums,n)
+result = totalsum(0,a,givenarr,target,sums,n)
 
 print(result)
+

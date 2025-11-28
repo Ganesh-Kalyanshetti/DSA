@@ -1,8 +1,7 @@
 def totalsum(i,a,res,givenarr,target,sums,n):
     if i==n:
         if target==sums:
-            for j in a:
-                res.append(j)
+            res.append(a.copy())
         return
     
     a.append(givenarr[i])

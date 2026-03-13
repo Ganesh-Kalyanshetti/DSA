@@ -1,0 +1,17 @@
+a={"a":"abc","b":"def"}
+
+for i,j in a.items():
+    print("Key-->",i,"and Value-->",j)
+    
+print("\n heloooooooooooooooo\n\n")
+b={"a":[1,2,3,4,5],"c":3}
+for i in b:
+    if isinstance(b[i],list):
+        for v in b[i]:
+            print("key in b-->",i,'and value-->',v)
+    else:
+        print("key in b-->",i,'and value-->',b[i])
+
+
+c={"a":{"b":{"d":5}},"c":3}
+print("\n\n",c)
